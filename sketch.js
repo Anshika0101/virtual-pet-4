@@ -16,7 +16,7 @@ function preload(){
 
 function setup() {
   database = firebase.database();
-  createCanvas(1000, 500);
+  createCanvas(500, 500);
 
   foodObj=new Food();
   
@@ -37,11 +37,39 @@ function setup() {
   milkBotltle2.scale = 0.025;
   milkBotltle2.visible = false;
 
+  for (var i = 5; i < 500; i=i+10) 
+{
+
+var dot = createSprite(i, 5, 3, 3);
+dot.shapeColor = "purple";
+
+}
+for (var i = 5; i < 500; i=i+10) 
+{
+
+var dot1 = createSprite(i, 495, 3, 3);
+dot1.shapeColor = "purple";
+
+}
+for (var i = 5; i < 500; i=i+10) 
+{
+
+var dot1 = createSprite(495,i, 3, 3);
+dot1.shapeColor = "purple";
+
+}
+for (var i = 5; i < 500; i=i+10) 
+{
+
+var dot1 = createSprite(5,i, 3, 3);
+dot1.shapeColor = "purple";
+
+}
 }
 
 
 function draw() {  
-  background("yellow")
+  background("pink")
 
   foodObj.display();
   writeStock(foodS);
